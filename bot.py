@@ -15,8 +15,10 @@ logging.basicConfig(format = "%(asctime)s - %(name)s - %(levelname)s  - %(messag
 
 logger = logging.getLogger(__name__)
 
+#if it is in chaotic mood it will not help when you want it to help (+ d'autres fonctionnalités si vous avez de l'inspi)
 chaoticMood = True
 
+#set of the stickers that the bot will send when trigger words are sent
 teffe7aPack = {
     "scary jad"             : "CAACAgQAAxkBAAEGq8dji8npHraSlcWGyI8HYO45uarHFwACVg4AAi-xQVNVw2ytAUVEFCsE",
     "yassine masterclass"   : "CAACAgQAAxkBAAEGq8lji8oD6HJFQV9zQXXSJa_slTjXuwACaQ0AAvY7QFObyhQn_yiQISsE", 
@@ -61,12 +63,15 @@ teffe7aPack = {
     "aveugle"               : "CAACAgQAAxkBAAEGrCJji80Z-zcQOdw4XTKWAntGOpZ8zAACrA4AApd6qVM7HkoJ1G45ZisE",
     "rien à foutre"         : "CAACAgQAAxkBAAEGrCRji80oa0bNh98HHSN-lVl7F2MHhAACLgwAAkB8sVOf0ZHTW0hYnCsE",
     "kratos messi"          : "CAACAgQAAxkBAAEGrCZji803Wn9VWkOBbVBGgj-c0CiPXwACtQ4AAk9VGVAwKG_C9epUWCsE",
-    "sorcellerie"           : "CAACAgQAAxkBAAEGrChji81LnGyfbrZBRe6z_vqtMnVlswACHw0AAgiRIFCUZ2ukf8yNsysE"
+    "sorcellerie"           : "CAACAgQAAxkBAAEGrChji81LnGyfbrZBRe6z_vqtMnVlswACHw0AAgiRIFCUZ2ukf8yNsysE",
+    "coolos"                : "CAACAgQAAxkBAAEGrftjjMVvwD4kSw-6o0QbzrI5JWS2EAACZg4AAlDwYVC5MaFFqV88visE"
 }
 
+#start the bot
 def start(update, context):
     update.message.reply_text("wesh wesh canne à pêche")
 
+#help function of the bot
 def help(update, context):
     if chaoticMood :
         update.message.reply_text(
@@ -81,21 +86,26 @@ def help(update, context):
                 ..."""
         )
 
+#sends a poll to see who is on campus and where
 #def epfl(update, context):
     ##help
 
+#error function of the bot
 def error(update, context):
     logger.info("i hate u you broke me :|, fix it: {context.error}")
 
+#detects trigger words
 def regexFilter(main, *keywords) : 
   filters = Filters.regex(re.compile(main, re.IGNORECASE))
   for k in keywords :
     filters |= Filters.regex(re.compile(k, re.IGNORECASE))
   return filters
 
+#sends the react sticker
 def reactSticker(sticker):
   return lambda update, context : update.message.reply_sticker(sticker, quote=False)
 
+#associates trigger words to stickers
 def addSticker(reaction, *keywords):
     dp.add_handler(MessageHandler(regexFilter(*keywords), reactSticker(reaction)))
 
@@ -106,52 +116,55 @@ def main():
     global dp
     dp = updater.dispatcher
 
+    #add the function handlers for each function of the bot
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("help", help))
     #dp.add_handler(CommandHandler("epfl", epfl))
 
+    #link trigger words to stickers
     addSticker(teffe7aPack["scary jad"]             , "come")
     addSticker(teffe7aPack["yassine masterclasse"]  , "masterclasse", "pres", "vp")
     addSticker(teffe7aPack["jad w/ knife"]          , )
     addSticker(teffe7aPack["mamoun"]                , "desert", "maroc")
     addSticker(teffe7aPack["L"]                     , "L", "cheh", "che7", "F")
     addSticker(teffe7aPack["matthias wyss"]         , "LeBron James")
-    addSticker(teffe7aPack["scary jad 2"]           , "no way")
-    addSticker(teffe7aPack["greenscreen jad"]       , )
+    addSticker(teffe7aPack["scary jad 2"]           , )
+    addSticker(teffe7aPack["greenscreen jad"]       , "no way")
     addSticker(teffe7aPack["pikachu mamoun"]        , )
-    addSticker(teffe7aPack["unlike"]                , )
-    addSticker(teffe7aPack["baguette"]              , )
-    addSticker(teffe7aPack["dalle"]                 , )
+    addSticker(teffe7aPack["unlike"]                , "nul", "no", "nono", "non")
+    addSticker(teffe7aPack["baguette"]              , "baguette", "pain")
+    addSticker(teffe7aPack["dalle"]                 , "j'ai faim", "dalle", "on mange quoi")
     addSticker(teffe7aPack["urs knife 1"]           , )
     addSticker(teffe7aPack["urs knife 2"]           , )
     addSticker(teffe7aPack["urs knife 3"]           , )
     addSticker(teffe7aPack["urs knife 4"]           , )
     addSticker(teffe7aPack["urs knife 5"]           , )
-    addSticker(teffe7aPack["emergency exit"]        , )
-    addSticker(teffe7aPack["agepAuLit"]             , )
-    addSticker(teffe7aPack["basé"]                  , )
-    addSticker(teffe7aPack["cap"]                   , )
-    addSticker(teffe7aPack["réel"]                  , )
+    addSticker(teffe7aPack["emergency exit"]        , "head out", "emergency", "aled")
+    addSticker(teffe7aPack["agepAuLit"]             , "rompichâmes", "bonne nuit", "rompichames")
+    addSticker(teffe7aPack["basé"]                  , "basé", "base", "based")
+    addSticker(teffe7aPack["cap"]                   , "cap", "tu mens", "menteur", "menteuse")
+    addSticker(teffe7aPack["réel"]                  , "réel", "reel", "real")
     addSticker(teffe7aPack["crowd"]                 , )
-    addSticker(teffe7aPack["bagarre"]               , )
-    addSticker(teffe7aPack["wasted"]                , )
-    addSticker(teffe7aPack["à fond"]                , )
-    addSticker(teffe7aPack["algebre"]               , )
-    addSticker(teffe7aPack["sunglasses omar"]       , )
-    addSticker(teffe7aPack["colonel"]               , )
-    addSticker(teffe7aPack["dinguerie wesh"]        , )
-    addSticker(teffe7aPack["hassen thinking"]       , )
-    addSticker(teffe7aPack["sofia imposteur"]       , )
-    addSticker(teffe7aPack["imagine"]               , )
+    addSticker(teffe7aPack["bagarre"]               , "bagarre", "combat", "battre", "bagarrer", "frapper", "tapper")
+    addSticker(teffe7aPack["wasted"]                , "dead", "mort", "morte")
+    addSticker(teffe7aPack["à fond"]                , "à fond", "a fond")
+    addSticker(teffe7aPack["algebre"]               , "algebre", "algèbre", "aadjad", "aanjad")
+    addSticker(teffe7aPack["sunglasses omar"]       , "eywa")
+    addSticker(teffe7aPack["colonel"]               , "colonel")
+    addSticker(teffe7aPack["dinguerie wesh"]        , "dinguerie", "dinguerie wesh")
+    addSticker(teffe7aPack["hassen thinking"]       , "hmmm", "hmm", "mmm", "mmmm", "hmmmmmmm")
+    addSticker(teffe7aPack["sofia imposteur"]       , "imposteur", "impostor", "amogus", "sus")
+    addSticker(teffe7aPack["imagine"]               , "imagine")
     addSticker(teffe7aPack["caddie"]                , )
-    addSticker(teffe7aPack["jad filou"]             , )
-    addSticker(teffe7aPack["IC Wars"]               , )
-    addSticker(teffe7aPack["yass queen"]            , )
-    addSticker(teffe7aPack["wiwi filou"]            , )
-    addSticker(teffe7aPack["fax"]                   , )
-    addSticker(teffe7aPack["yas strong"]            , )
+    addSticker(teffe7aPack["jad filou"]             , "filou")
+    addSticker(teffe7aPack["IC Wars"]               , "i see")
+    addSticker(teffe7aPack["yass queen"]            , "yass queen", "yassqueen", "yasqueen", "yas queen", "slay", "queen")
+    addSticker(teffe7aPack["wiwi filou"]            , "ours")
+    addSticker(teffe7aPack["fax"]                   , "facts", "fax")
+    addSticker(teffe7aPack["yas strong"]            , "alpha", "beta", "omega", "sigma", "strong", "fort")
     addSticker(teffe7aPack["aveugle"]               , )
-    addSticker(teffe7aPack["rien à foutre"]         , )
-    addSticker(teffe7aPack["kratos messi"]          , )
-    addSticker(teffe7aPack["sorcellerie"]           , )
+    addSticker(teffe7aPack["rien à foutre"]         , "rien à foutre", "raf", "blc", "balec", "jmf", "menfou", "je m'enfout")
+    addSticker(teffe7aPack["kratos messi"]          , "kratos", "messi")
+    addSticker(teffe7aPack["sorcellerie"]           , "incroyable", "sorcellerie", "wtf")
+    addSticker(teffe7aPack["coolos"]                , "drip", "coolos", "cool")
 
