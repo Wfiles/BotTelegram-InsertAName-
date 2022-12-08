@@ -7,7 +7,7 @@ import re
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 PORT = int(os.environ.get('PORT', 5000))
-TOKEN = "" ##????
+TOKEN = os.getenv('API_TOKEN')
 
 # Enable logging
 logging.basicConfig(format = "%(asctime)s - %(name)s - %(levelname)s  - %(message)s", 
