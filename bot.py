@@ -7,7 +7,7 @@ import re
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 PORT = int(os.environ.get('PORT', 5000))
-TOKEN = "5862212486:AAFZmdpodJByZPh6GJM5QdY4MLac6-9eePs"
+TOKEN = os.getenv('API_TOKEN')
 
 # Enable logging
 logging.basicConfig(format = "%(asctime)s - %(name)s - %(levelname)s  - %(message)s", level = logging.INFO)
@@ -119,6 +119,10 @@ def reactSticker(sticker):
 #associates trigger words to stickers
 def addSticker(reaction, *keywords):
     dp.add_handler(MessageHandler(regexFilter(*keywords), reactSticker(reaction)))
+
+#def modifyMood(*keywords):
+#    if chaoticMood:
+#        chaoticMood = False
 
 ##MAIN##
 def main():
