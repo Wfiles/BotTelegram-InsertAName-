@@ -1,0 +1,236 @@
+{ 
+    "teffe7aPackNotRestricted" : [
+        {
+            "name"              : "scary jad",
+            "ref"               : "CAACAgQAAxkBAAEGq8dji8npHraSlcWGyI8HYO45uarHFwACVg4AAi-xQVNVw2ytAUVEFCsE",
+            "trigger words"     : ["come", "viens"]
+        },
+        {
+            "name"              : "yassine masterclasse",
+            "ref"               : "CAACAgQAAxkBAAEGq8lji8oD6HJFQV9zQXXSJa_slTjXuwACaQ0AAvY7QFObyhQn_yiQISsE",
+            "trigger words"     : ["masterclasse", "pres", "vp", "il faut donner crédit là où crédit est dû"]
+        },
+        {
+            "name"              : "mamoun",
+            "ref"               : "CAACAgQAAxkBAAEGq81ji8ou-1UIYg8kR01x9JefhAABslUAAi0NAAK0VUlTwqD-X9j_maIrBA",
+            "trigger words"     : ["desert", "maroc"]
+        },
+        {
+            "name"              : "L",
+            "ref"               : "CAACAgQAAxkBAAEGq89ji8o58Xa-BTMVT_wEIW6nUuGCMgACsA0AAkrKQVNfbuoOw8OncCsE",
+            "trigger words"     : ["cheh", "che7"]
+        },
+        {
+            "name"              : "matthias wyss",
+            "ref"               : "CAACAgQAAxkBAAEGq9Fji8pHxoVlf13YTYdevqucJAWz5gACYw0AAlLlQFOJMj8mM_ou-ysE",
+            "trigger words"     : ["LeBron James"]
+        },
+        {
+            "name"              : "greenscreen jad",
+            "ref"               : "CAACAgQAAxkBAAEGq9Vji8pel4E1DqWR5VRS5XD5u0CPuwACQBAAAtNFSFOstDSZqAm61isE",
+            "trigger words"     : ["no way"]
+        },
+        {
+            "name"              : "unlike",
+            "ref"               : "CAACAgQAAxkBAAEGq91ji8qLIZYWjSTwmVFKl77iEKPmWgACzA0AAvwAAUBT6qL7ZbjmkAUrBA",
+            "trigger words"     : ["nul"]
+        },
+        {
+            "name"              : "baguette",
+            "ref"               : "CAACAgQAAxkBAAEGq99ji8qVsDTvqoUuWyB8YFudMjOwAAMZDAAC4rtJU8ktQZImeNcRKwQ",
+            "trigger words"     : ["baguette", "pain"]
+        },
+        {
+            "name"              : "dalle",
+            "ref"               : "CAACAgQAAxkBAAEGq9lji8pp02JHGbRciVnQQg8xcOGATgAC9A0AAmvkQVOG-A9OTdcptysE",
+            "trigger words"     : ["j'ai faim", "dalle", "on mange quoi"]
+        },
+        {
+            "name"              : "emergency exit",
+            "ref"               : "CAACAgQAAxkBAAEGq-tji8rrqt_y4OG3KbCHTbdMOwLRBwAC6Q0AAjr8QVOBAj8v1tVpiCsE",
+            "trigger words"     : ["head out", "emergency"]
+        },
+        {
+            "name"              : "agepAuLit",
+            "ref"               : "CAACAgQAAxkBAAEGq-1ji8r3W-UDDa-5XspPsjpHZD3VxgACGA8AAihAIFDiSO3j6T5JuCsE",
+            "trigger words"     : ["rompichâmes", "bonne nuit", "rompichames"]
+        },
+        {
+            "name"              : "basé",
+            "ref"               : "CAACAgQAAxkBAAEGq_Jji8sDUguYvgi-lpUewGkeKyFjEQAChA0AAncEUFPS0h_m7nbUnysE",
+            "trigger words"     : ["basé", "base", "based"]
+        },
+        {
+            "name"              : "cap",
+            "ref"               : "CAACAgQAAxkBAAEGq_Zji8sO51887Uw-KHmudoz8458kGAACKgwAAtG3SVN0Qv2iJ939hSsE",
+            "trigger words"     : ["cap", "mens", "menteur", "menteuse"]
+        },
+        {
+            "name"              : "bagarre",
+            "ref"               : "CAACAgQAAxkBAAEGq_xji8tDgHRA2RALK1tZvgAB2iBuLIUAAvkOAAJs2UFTNteSUzyooJ8rBA",
+            "trigger words"     : ["bagarre", "combat", "battre", "bagarrer", "frapper", "tapper"]
+        },
+        {
+            "name"              : "wasted",
+            "ref"               : "CAACAgQAAxkBAAEGrAJji8tmNlULam_vDGaz9GzpsO28VgACvQ0AAsEYSVMAAYUFRS6YWiQrBA",
+            "trigger words"     : ["dead", "mort", "morte", "meurt"]
+        },
+        {
+            "name"              : "à fond",
+            "ref"               : "CAACAgQAAxkBAAEGrAABY4vLUgABIWiXnT_7yP_pcC4PY_zzAAL4DgAC4OdQU_0ccNq9jgX0KwQ",
+            "trigger words"     : ["à fond", "a fond"]
+        },
+        {
+            "name"              : "algebre",
+            "ref"               : "CAACAgQAAxkBAAEG94pjpbY4dSJS5fmTaSw-7V3nVQcztgAC8QwAAquZSVN9I3O3nPxZOCwE",
+            "trigger words"     : ["algebre", "algèbre", "aadjad", "aanjad"]
+        },
+        {
+            "name"              : "sunglasses omar",
+            "ref"               : "CAACAgQAAxkBAAEG94xjpbZJji2PIqGYKVrVa8DNMivTbgACWQ8AAtHESVNmuk2Pb4QlWSwE",
+            "trigger words"     : ["eywa"]
+        },
+        {
+            "name"              : "colonel",
+            "ref"               : "CAACAgQAAxkBAAEG945jpbeM7lqtB0YDPPe8lsoMe6l3RwACtQsAAqbFUVNVEDfLffQv3iwE",
+            "trigger words"     : ["colonel"]
+        },
+        {
+            "name"              : "dinguerie wesh",
+            "ref"               : "CAACAgQAAxkBAAEG95Jjpbev-H_K5JFf9xRa7ldUbVLxUwACuQ0AAjJOSVM3Bcto09l0HSwE",
+            "trigger words"     : ["dinguerie", "dinguerie wesh"]
+        },
+        {
+            "name"              : "sofia imposteur",
+            "ref"               : "CAACAgQAAxkBAAEG-INjpedurxgu5OxPwGrmvh5ti3szPAACCQ0AAv-XSVP4BLATBaDSgywE",
+            "trigger words"     : ["imposteur", "impostor", "amogus", "sus"]
+        },
+        {
+            "name"              : "imagine",
+            "ref"               : "CAACAgQAAxkBAAEG-IdjpefyldlgXv6tzhwVHbUhP1QQjwAC3Q4AAqscUFPtTOSO6791BCwE",
+            "trigger words"     : ["imagine", "imaginez"]
+        },
+        {
+            "name"              : "caddie",
+            "ref"               : "CAACAgQAAxkBAAEG-dZjphyX3e5_VfjOka1lJRoKM64eXAACyA4AAjNBUFOCK08NznTGtywE",
+            "trigger words"     : ["caddie"]
+        },
+        {
+            "name"              : "jad filou",
+            "ref"               : "CAACAgQAAxkBAAEG-IljpehaxenMpLk3864fwmCp102cTgACaA0AAh5fcVM8GPwnmvIcnywE",
+            "trigger words"     : ["filou"]
+        },
+        {
+            "name"              : "IC Wars",
+            "ref"               : "CAACAgQAAxkBAAEG-Itjpeh5ahROcsGRc8g2SWdRG8FOQAACqg8AAs8saFM4O9CITuSxiSwE",
+            "trigger words"     : ["i see"]
+        },
+        {
+            "name"              : "yass queen",
+            "ref"               : "CAACAgQAAxkBAAEG-I1jpeilx_r08NAUoLTcXCasImsYpAACLhAAAv5QaVOn7zzRubnoPCwE",
+            "trigger words"     : ["yass queen", "yassqueen", "yasqueen", "yas queen", "slay", "queen"]
+        },
+        {
+            "name"              : "wiwi filou",
+            "ref"               : "CAACAgQAAxkBAAEG-I9jpejowWw7S3cL9OPl9ydOZ3YrqwAC5xAAAgXjgFMj5eQzTpdBYiwE",
+            "trigger words"     : ["wiwi"]
+        },
+        {
+            "name"              : "fax",
+            "ref"               : "CAACAgQAAxkBAAEG-JFjpekNpa0Fu9HWhNThul2biIU6WQACuA8AAuCfiFNgrFXK2HJj-SwE",
+            "trigger words"     : ["facts", "fax"]
+        },
+        {
+            "name"              : "yas strong",
+            "ref"               : "CAACAgQAAxkBAAEG-JljpemxCAELOpFCRM1egKAzvhjPBAACfAsAAsSukVOUL-KAz5cn6iwE",
+            "trigger words"     : ["alpha", "beta", "omega", "sigma", "strong", "fort"]
+        },
+        {
+            "name"              : "rien à foutre",
+            "ref"               : "CAACAgQAAxkBAAEG-J1jpenukOtWnRVGAlJOsyCRLruj3gACLgwAAkB8sVOf0ZHTW0hYnCwE",
+            "trigger words"     : ["rien à foutre", "raf", "blc", "balec", "jmf", "menfou", "je m'enfout"]
+        },
+        {
+            "name"              : "kratos messi",
+            "ref"               : "CAACAgQAAxkBAAEG-J9jpeoYbJ0Z4qYRqCzuqa2TOAj4xQACtQ4AAk9VGVAwKG_C9epUWCwE",
+            "trigger words"     : ["kratos", "messi"]
+        },
+        {
+            "name"              : "sorcellerie",
+            "ref"               : "CAACAgQAAxkBAAEG-KFjpeozWMzBV1USuV7yprjsv8qDBwACHw0AAgiRIFCUZ2ukf8yNsywE",
+            "trigger words"     : ["incroyable", "sorcellerie", "wtf"]
+        },
+        {
+            "name"              : "coolos",
+            "ref"               : "CAACAgQAAxkBAAEG-KNjpepnhztZXjWihpqx9l9p_jZdDgACZg4AAlDwYVC5MaFFqV88viwE",
+            "trigger words"     : ["drip", "coolos", "cool"]
+        },
+        {
+            "name"              : "lina zinzin",
+            "ref"               : "CAACAgQAAxkBAAEG-LBjper_n1zpWwSpIcNrvwePp_QJugACHxcAAlv9eVAflkpCbug88SwE",
+            "trigger words"     : ["zinzin"]
+        },
+        {
+            "name"              : "chillax",
+            "ref"               : "CAACAgQAAxkBAAEG-LJjpesv13Ai_uWbXDbmkxLmLK2E1AACOxAAAh0ImVAURMl9kj6MgCwE",
+            "trigger words"     : ["chillos"]
+        },
+        {
+            "name"              : "hater",
+            "ref"               : "CAACAgQAAxkBAAEG-MpjpetUxpno9O_UhS2eyQpE6JkffwACkBEAApJNwFCuv-GEms30MSwE",
+            "trigger words"     : ["hater"]
+        },
+        {
+            "name"              : "mérité",
+            "ref"               : "CAACAgQAAxkBAAEG-PJjpevhx2UGZVEtVl7DZgjBZvnkjQACFBAAAkoz2FAECxLj7CnPMywE",
+            "trigger words"     : ["mérité"]
+        },
+        {
+            "name"              : "hapi",
+            "ref"               : "CAACAgQAAxkBAAEG-PRjpev_X9eEfnAFVHrPjPl3X_Ri5wAC1Q8AAmtY0VC0YL3qAfi7ViwE",
+            "trigger words"     : ["happy", "content"]
+        },
+        {
+            "name"              : "noel",
+            "ref"               : "CAACAgQAAxkBAAEG-PZjpewhLTU8OD7DmFOMcUz0w6ZMCgACBhIAAm672VAQII2aIu1NbiwE",
+            "trigger words"     : ["noel", "santa"]
+        },
+        {
+            "name"              : "ma vie",
+            "ref"               : "CAACAgQAAxkBAAEG-dRjphyPii4AAUsHUQ56V6ZHNray_IYAAvUOAAIZgDBRXjYOgBE3nrIsBA",
+            "trigger words"     : ["mv", "ma vie"]
+        }
+    ],
+    "teffe7aPackRestricted" : [
+        {
+            "name"              : "réel",
+            "ref"               : "CAACAgQAAxkBAAEGq_hji8sZTDf2HPX_cAqZuvOvRsOuUgAC4AwAAoHySVOx8Q51K2QsRysE",
+            "trigger words"     : ["réel", "reel", "real"]
+        },
+        {
+            "name"              : "hassen thinking",
+            "ref"               : "CAACAgQAAxkBAAEG95RjpbfQXyEK25E85IHsUtmAYycoCwACDwoAArVoSVNCibIFymEVFCwE",
+            "trigger words"     : ["hmmm", "hmm", "mmm", "mmmm", "hmmmmmmm"]
+        },
+        {
+            "name"              : "help needed",
+            "ref"               : "CAACAgQAAxkBAAEG-KpjpeqNwLbI9RxTspTOiXRhhjwj6QACVQ0AAnihcVDCmb4Iae1SYywE",
+            "trigger words"     : ["aled", "help"]
+        },
+        {
+            "name"              : "ratio",
+            "ref"               : "CAACAgQAAxkBAAEG-Nhjpetyjy-zEVmyAAGb61H-CoUmTGEAAvoLAAJXr9hQ-91eBZ8ElMgsBA",
+            "trigger words"     : ["ratio"]
+        },
+        {
+            "name"              : "feur",
+            "ref"               : "CAACAgQAAxkBAAEG-PhjpexAnbXFwtr8qMVtxH3piaFRDgACvw0AAuFj4VBM460n4dzeXCwE",
+            "trigger words"     : ["quoi"]
+        },
+        {
+            "name"              : "sayé",
+            "ref"               : "CAACAgQAAxkBAAEG-PpjpexcyxxaxI-AMJg9hIBX0zSv_AACig8AAl3i4VBYzR7A7IaS0iwE",
+            "trigger words"     : ["sayé", "saye"]
+        }
+    ]
+}
