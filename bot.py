@@ -5,10 +5,11 @@ import requests
 import random
 import os
 import re
+import telegram
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 PORT = int(os.environ.get('PORT', 5000))
-TOKEN = os.getenv('API_TOKEN')
+TOKEN = '5862212486:AAFZmdpodJByZPh6GJM5QdY4MLac6-9eePs'
 
 # Enable logging
 logging.basicConfig(format = "%(asctime)s - %(name)s - %(levelname)s  - %(message)s", level = logging.INFO)
@@ -38,21 +39,29 @@ def help(update, context):
         )
 
 #sends a poll to see who is on campus and where
-#def epfl(update, context):
-    ##help
+def epfl(update, context):
+    chat_id = update.message.chat.id
+    update.send_poll(
+        chat_id = chat_id,
+        question="where you at?",
+        options = ["bc", "bibli inm", "inf", "rolex", "co", "cm", "migros", 
+            "somewhere else sur campus", "somewhere else pas sur campus", "omw to campus"], 
+        is_anonymous = False, 
+        type = telegram.Poll.REGULAR)
 
 #error function of the bot
 def error(update, context):
     logger.info("i hate u you broke me :|, fix it: {context.error}")
 
 #sends the saisine audio
-def storm(self, update, context):
-    print("bbbbbbbbbb")
+def storm(update, context):
     with open("media/saisine.mp3", "rb") as f:
-        print("aaaaaaaaaa")
         update.message.reply_audio(audio=f)
 
-    self.logger.info("JAD IS APPROACHING !")
+    if update.message.from_user.username == "Jadel15":
+        update.message.reply_text("YOU ARE APPROACHING !")
+    else:
+        update.message.reply_text("JAD IS APPROACHING !")
 
 #detects trigger words
 def regexFilter(main, *keywords) : 
@@ -89,7 +98,7 @@ def main():
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("help", help))
     dp.add_handler(CommandHandler("storm", storm))
-    #dp.add_handler(CommandHandler("epfl", epfl))
+    dp.add_handler(CommandHandler("epfl", epfl))
 
     with open("source/sticker_file.json", "r") as f:
         stickers = json.load(f)
