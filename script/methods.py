@@ -10,7 +10,7 @@ import datetime
 import pytz
 
 #imprt recommendation chat id
-rec_chat_id = -826861106 #os.getenv('RECOMMENDATION_CHAT_ID')
+rec_chat_id = os.getenv('RECOMMENDATION_CHAT_ID')
 
 #import stickers from json
 with open("source/sticker_file.json", "r") as f:

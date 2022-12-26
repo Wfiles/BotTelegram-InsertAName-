@@ -8,7 +8,7 @@ from methods import start, storm, epfl, recommendations, sendSticker, rickrolled
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 PORT = int(os.environ.get('PORT', 5000))
-TOKEN = '5862212486:AAFZmdpodJByZPh6GJM5QdY4MLac6-9eePs' #os.getenv('API_TOKEN')
+TOKEN = os.getenv('API_TOKEN')
 
 variables.bot = telegram.Bot(token=TOKEN)
 
