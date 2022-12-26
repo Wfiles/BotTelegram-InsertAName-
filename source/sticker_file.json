@@ -231,6 +231,11 @@
             "name"              : "sayé",
             "ref"               : "CAACAgQAAxkBAAEG-PpjpexcyxxaxI-AMJg9hIBX0zSv_AACig8AAl3i4VBYzR7A7IaS0iwE",
             "trigger words"     : ["sayé", "saye"]
+        },
+        {
+            "name"              : "L",
+            "ref"               : "CAACAgQAAxkBAAEGq89ji8o58Xa-BTMVT_wEIW6nUuGCMgACsA0AAkrKQVNfbuoOw8OncCsE",
+            "trigger words"     : ["l", "f"]
         }
     ]
 }
