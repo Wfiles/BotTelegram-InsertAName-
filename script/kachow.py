@@ -4,7 +4,7 @@ import os
 import random
 import telegram
 
-from methods import start, storm, epfl, recommendations, sendSticker, rickrolled, ban, birthday, kat, doggo, memes, babypic
+from methods import start, storm, epfl, recommendations, sendSticker, rickrolled, ban, birthday, kat, doggo, memes, babypic, complimentme
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 PORT = int(os.environ.get('PORT', 5000))
@@ -64,6 +64,7 @@ dp.add_handler(CommandHandler("kat", kat))
 dp.add_handler(CommandHandler("doggo", doggo))
 dp.add_handler(CommandHandler("meme", memes))
 dp.add_handler(CommandHandler("babypic", babypic))
+dp.add_handler(CommandHandler("complimentme", complimentme))
 dp.add_handler(MessageHandler(Filters.text, sendSticker))
 
 dp.add_error_handler(error)

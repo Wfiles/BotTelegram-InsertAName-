@@ -21,6 +21,10 @@ with open("source/birthdays.json", "r") as f:
     birthdays = json.load(f)
 f.close()
 
+with open("source/compliments.json", "r") as f:
+    compliments = json.load(f)
+f.close()
+
 #start the bot
 def start(update, context):
     update.message.reply_text("wesh wesh canne à pêche")
@@ -106,8 +110,15 @@ def ban(update, context):
         update.message.reply_text('On va te ban à toi')
         return
 
+    user = update.message.from_user.first_name
     user_sender =  update.message.reply_to_message.from_user.first_name
     chat_id = update.message.chat.id
+    if user_sender == "KachowBot":
+        variables.bot.send_message(
+        chat_id = chat_id,
+        text = f'{user} pk tu me ban ? :( '
+        ) 
+        return
     variables.bot.send_message(
         chat_id = chat_id,
         text = f'{user_sender} on te ban !'
@@ -173,3 +184,8 @@ def babypic(update, context):
     filename = os.path.join(folder, random.choice(os.listdir(folder)))
     with open(filename, "rb") as f:
         update.message.reply_photo(photo=f, caption=caption)
+
+def complimentme(update, context):
+    index = random.randint(0, len(compliments))
+    print(len(compliments))
+    update.message.reply_text(compliments[index])
