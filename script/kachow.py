@@ -3,12 +3,22 @@ import variables
 import os
 import random
 import telegram
+import json
 
-from methods import start, storm, epfl, recommendations, sendSticker, rickrolled, ban, birthday, kat, doggo, memes, babypic, complimentme
+from methods.basic import start, recommendations
+from methods.troll import rickrolled, ban, sendSticker
+from methods.polls import epfl, onmangeou
+from methods.spam import storm, kat, doggo, memes, babypic, complimentme, copains, aaa, birthday
+
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+
+with open("source/birthdays.json", "r") as f:
+    birthdays = json.load(f)
+f.close()
 
 PORT = int(os.environ.get('PORT', 5000))
 TOKEN = os.getenv('API_TOKEN')
+rec_chat_id = os.getenv('RECOMMENDATION_CHAT_ID')
 
 variables.bot = telegram.Bot(token=TOKEN)
 
@@ -37,15 +47,19 @@ def help(update, context):
 /where : creates a poll to see who is where on campus
 /ban : ban a friend for the lols
 /storm : JAD IS APPROACHING
-/kat : sends a cute car picture :3
+/kat : sends a cute cat picture :3
 /doggo : sends a cute dog picture :>
 /babypic : self explanatory :D
+/meme : sends a funny meme haha
+/copains : sends a pic of us ;)
+/manger : sends a poll to see where we eat
 /rec : sends us recommendations about what you want to see, you only need to send the message in the format '/rec blabla' :)
 ...""")
 
 ##################################################################################
 ##############################    MAIN    ########################################
 ##################################################################################
+
 
 updater = Updater(token = TOKEN, use_context = True)
 
@@ -65,7 +79,12 @@ dp.add_handler(CommandHandler("doggo", doggo))
 dp.add_handler(CommandHandler("meme", memes))
 dp.add_handler(CommandHandler("babypic", babypic))
 dp.add_handler(CommandHandler("complimentme", complimentme))
+dp.add_handler(CommandHandler("copains", copains))
+dp.add_handler(CommandHandler("manger", onmangeou))
+dp.add_handler(CommandHandler("aaa", aaa))
+dp.add_handler(CommandHandler("startbirthday", birthday))
 dp.add_handler(MessageHandler(Filters.text, sendSticker))
+
 
 dp.add_error_handler(error)
 
@@ -74,6 +93,3 @@ updater.start_polling()
 print("Your telegram bot is running!")
 
 updater.idle()
-
-#while True:
-#    birthday()
