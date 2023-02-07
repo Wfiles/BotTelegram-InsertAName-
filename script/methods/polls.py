@@ -18,6 +18,7 @@ def epfl(update, context):
             "somewhere else sur campus", "somewhere else pas sur campus", "omw to campus"], 
         is_anonymous = False)
 
+#sends a poll to see where we want to eat
 def onmangeou(update, context):
     number = random.randint(1, 100)
     if number == 5:

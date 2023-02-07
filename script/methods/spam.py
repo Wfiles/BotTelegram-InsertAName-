@@ -5,12 +5,7 @@ import json
 import random
 import os
 
-from datetime import datetime
-import pytz
-
 from methods.troll import rickrolled
-
-kachow_chat_id = os.getenv('KACHOW_CHAT_ID')
 
 with open("source/compliments.json", "r") as f:
     compliments = json.load(f)
@@ -96,26 +91,3 @@ def copains(update, context):
 def aaa(update, context):
     user = update.message.from_user.first_name
     variables.bot.send_message(chat_id = update.message.chat.id, text = f'{user} wants to say : AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
-
-def birthday(update, context):
-    time = datetime.now(pytz.timezone('Europe/Zurich'))
-    job_queue = updater.job_queue
-    for bday in birthdays["birthdays"]:
-        job_queue.run_repeating(birthday_message(bday, time), interval = 86400, first = 0.0)
-
-def birthday_message(bday, time):
-    age = time.year - int(bday['year'])
-    print(bday['year'])
-    if (int(bday['year']) <= 2004):
-        variables.bot.send_message(
-            chat_id = kachow_chat_id,
-            text = f'Happy birthday {bday["name"]} ! ur still a baby hehe, only {age} years old >:) we still love you tho ;)')
-    elif (int(bday['year']) == 2003):
-        variables.bot.send_message(
-            chat_id = kachow_chat_id,
-            text = f'Happy birthday {bday["name"]} ! {age} ans déjà !!! we love you enjoy it au max ;)')
-    else:
-        variables.bot.send_message(
-            chat_id = kachow_chat_id,
-            text = f'Happy birthday {bday["name"]} ! ur old, {age} ans déjà :| jk jk we love you anyway ;)')
-    return

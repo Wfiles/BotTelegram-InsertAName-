@@ -10,6 +10,7 @@ f.close()
 def rickrolled(update, context):
     with open("media/RickRolled.mp4", "rb") as f:
         update.message.reply_video(video=f)
+    f.close()
 
 def ban(update, context):
     number = random.randint(1, 100)
@@ -18,13 +19,14 @@ def ban(update, context):
         return
     
     text_reply = update.message.reply_to_message
-    if text_reply is None:
-        update.message.reply_text('On va te ban à toi')
-        return
-
     user = update.message.from_user.first_name
     user_sender =  update.message.reply_to_message.from_user.first_name
     chat_id = update.message.chat.id
+
+    if text_reply is None:
+        update.message.reply_text('On va te ban à toi')
+        return
+    
     if user_sender == "KachowBot":
         variables.bot.send_message(
         chat_id = chat_id,
@@ -38,6 +40,10 @@ def ban(update, context):
 
 #sends stickers according to trigger words
 def sendSticker(update, context):
+    number = random.randint(1, 500)
+    if number != 5:
+        return
+
     number = random.randint(1, 100)
     if number == 5:
         rickrolled(update, context)

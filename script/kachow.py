@@ -5,19 +5,24 @@ import random
 import telegram
 import json
 
+from datetime import datetime
+import pytz
+
 from methods.basic import start, recommendations
 from methods.troll import rickrolled, ban, sendSticker
 from methods.polls import epfl, onmangeou
-from methods.spam import storm, kat, doggo, memes, babypic, complimentme, copains, aaa, birthday
+from methods.spam import storm, kat, doggo, memes, babypic, complimentme, copains, aaa
 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+
+kachow_chat_id = -1878934544 #os.getenv('KACHOW_CHAT_ID')
 
 with open("source/birthdays.json", "r") as f:
     birthdays = json.load(f)
 f.close()
 
 PORT = int(os.environ.get('PORT', 5000))
-TOKEN = os.getenv('API_TOKEN')
+TOKEN = '5862212486:AAFZmdpodJByZPh6GJM5QdY4MLac6-9eePs' #os.getenv('API_TOKEN')
 rec_chat_id = os.getenv('RECOMMENDATION_CHAT_ID')
 
 variables.bot = telegram.Bot(token=TOKEN)
@@ -50,11 +55,36 @@ def help(update, context):
 /kat : sends a cute cat picture :3
 /doggo : sends a cute dog picture :>
 /babypic : self explanatory :D
-/meme : sends a funny meme haha
 /copains : sends a pic of us ;)
 /manger : sends a poll to see where we eat
 /rec : sends us recommendations about what you want to see, you only need to send the message in the format '/rec blabla' :)
+/aaa : AAAAAAAAAAAAAAAAAAAAA
 ...""")
+
+def birthday(update, context):
+    time = datetime.now(pytz.timezone('Europe/Zurich'))
+    job_queue = updater.job_queue
+    if job_queue.jobs != None:
+        return
+    for bday in birthdays["birthdays"]:
+        job_queue.run_repeating(birthday_message(bday, time), interval = 86400, first = 0.0)
+
+def birthday_message(bday, time):
+    age = time.year - int(bday['year'])
+    print(bday['year'])
+    if (int(bday['year']) <= 2004):
+        variables.bot.send_message(
+            chat_id = kachow_chat_id,
+            text = f'Happy birthday {bday["name"]} ! ur still a baby hehe, only {age} years old >:) we still love you tho ;)')
+    elif (int(bday['year']) == 2003):
+        variables.bot.send_message(
+            chat_id = kachow_chat_id,
+            text = f'Happy birthday {bday["name"]} ! {age} ans déjà !!! we love you enjoy it au max ;)')
+    else:
+        variables.bot.send_message(
+            chat_id = kachow_chat_id,
+            text = f'Happy birthday {bday["name"]} ! ur old, {age} ans déjà :| jk jk we love you anyway ;)')
+    return
 
 ##################################################################################
 ##############################    MAIN    ########################################
@@ -76,7 +106,7 @@ dp.add_handler(CommandHandler("rec", recommendations))
 dp.add_handler(CommandHandler("ban", ban))
 dp.add_handler(CommandHandler("kat", kat))
 dp.add_handler(CommandHandler("doggo", doggo))
-dp.add_handler(CommandHandler("meme", memes))
+#dp.add_handler(CommandHandler("meme", memes))
 dp.add_handler(CommandHandler("babypic", babypic))
 dp.add_handler(CommandHandler("complimentme", complimentme))
 dp.add_handler(CommandHandler("copains", copains))

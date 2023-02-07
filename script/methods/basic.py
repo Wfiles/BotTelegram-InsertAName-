@@ -6,7 +6,7 @@ import os
 import pytz
 
 #import recommendation chat id
-rec_chat_id = os.getenv('RECOMMENDATION_CHAT_ID')
+rec_chat_id = -826861106 #os.getenv('RECOMMENDATION_CHAT_ID')
 
 with open("source/birthdays.json", "r") as f:
     birthdays = json.load(f)
