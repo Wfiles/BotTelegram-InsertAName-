@@ -15,14 +15,14 @@ from methods.spam import storm, kat, doggo, memes, babypic, complimentme, copain
 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
-kachow_chat_id = -1878934544 #os.getenv('KACHOW_CHAT_ID')
+kachow_chat_id = os.getenv('KACHOW_CHAT_ID')
 
 with open("source/birthdays.json", "r") as f:
     birthdays = json.load(f)
 f.close()
 
 PORT = int(os.environ.get('PORT', 5000))
-TOKEN = '5862212486:AAFZmdpodJByZPh6GJM5QdY4MLac6-9eePs' #os.getenv('API_TOKEN')
+TOKEN = os.getenv('API_TOKEN')
 rec_chat_id = os.getenv('RECOMMENDATION_CHAT_ID')
 
 variables.bot = telegram.Bot(token=TOKEN)
