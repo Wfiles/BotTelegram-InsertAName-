@@ -8,7 +8,7 @@
         {
             "name"              : "yassine masterclasse",
             "ref"               : "CAACAgQAAxkBAAEGq8lji8oD6HJFQV9zQXXSJa_slTjXuwACaQ0AAvY7QFObyhQn_yiQISsE",
-            "trigger words"     : ["masterclasse", "pres", "vp", "il faut donner crédit là où crédit est dû"]
+            "trigger words"     : ["masterclasse", "president", "vp", "il faut donner crédit là où crédit est dû"]
         },
         {
             "name"              : "mamoun",
@@ -199,6 +199,61 @@
             "name"              : "ma vie",
             "ref"               : "CAACAgQAAxkBAAEG-dRjphyPii4AAUsHUQ56V6ZHNray_IYAAvUOAAIZgDBRXjYOgBE3nrIsBA",
             "trigger words"     : ["mv", "ma vie"]
+        },
+        {
+            "name"              : "réel",
+            "ref"               : "CAACAgQAAxkBAAEGq_hji8sZTDf2HPX_cAqZuvOvRsOuUgAC4AwAAoHySVOx8Q51K2QsRysE",
+            "trigger words"     : [" réel", " reel", " real", "réel ", "reel ", "real "]
+        },
+        {
+            "name"              : "hassen thinking",
+            "ref"               : "CAACAgQAAxkBAAEG95RjpbfQXyEK25E85IHsUtmAYycoCwACDwoAArVoSVNCibIFymEVFCwE",
+            "trigger words"     : [" hmmm", " hmm", " mmm", " mmmm", " hmmmmmmm", "hmmm ", "hmm ", "mmm ", "mmmm ", "hmmmmmmm "]
+        },
+        {
+            "name"              : "help needed",
+            "ref"               : "CAACAgQAAxkBAAEG-KpjpeqNwLbI9RxTspTOiXRhhjwj6QACVQ0AAnihcVDCmb4Iae1SYywE",
+            "trigger words"     : [" aled", " help", "aled ", "help "]
+        },
+        {
+            "name"              : "ratio",
+            "ref"               : "CAACAgQAAxkBAAEG-Nhjpetyjy-zEVmyAAGb61H-CoUmTGEAAvoLAAJXr9hQ-91eBZ8ElMgsBA",
+            "trigger words"     : [" ratio", "ratio "]
+        },
+        {
+            "name"              : "feur",
+            "ref"               : "CAACAgQAAxkBAAEG-PhjpexAnbXFwtr8qMVtxH3piaFRDgACvw0AAuFj4VBM460n4dzeXCwE",
+            "trigger words"     : [" quoi", "quoi "]
+        },
+        {
+            "name"              : "sayé",
+            "ref"               : "CAACAgQAAxkBAAEG-PpjpexcyxxaxI-AMJg9hIBX0zSv_AACig8AAl3i4VBYzR7A7IaS0iwE",
+            "trigger words"     : [" sayé", " saye", "sayé ", "saye "]
+        },
+        {
+            "name"              : "L",
+            "ref"               : "CAACAgQAAxkBAAEGq89ji8o58Xa-BTMVT_wEIW6nUuGCMgACsA0AAkrKQVNfbuoOw8OncCsE",
+            "trigger words"     : [" l ", " f "]
+        },
+        {
+            "name"              : "Verlan",
+            "ref"               : "CAACAgQAAxkBAAEHBzpjq0M-dAukbxVy3wnf0RbTOaguYQAClQ0AApOCOFF4G-25Vm9EzywE",
+            "trigger words"     : []
+        },
+        {
+            "name"              : "Sowwy",
+            "ref"               : "CAACAgQAAxkBAAEHBzxjq0NUvuHidIAf71wR0qQdUo7laQACwQ0AArzKMFFdMsPeW5agOiwE",
+            "trigger words"     : ["sorry", "déso"]
+        },
+        {
+            "name"              : "Who asked?",
+            "ref"               : "CAACAgQAAxkBAAEHBz5jq0NtQqklukAVBFS7jBBTMHQ5IwACCQ8AAlJ8UFElAcOuuQABKCQsBA",
+            "trigger words"     : ["racontes pas ta vie", "arrête de raconter ta vie"]
+        },
+        {
+            "name"              : "Feur 2",
+            "ref"               : "CAACAgQAAxkBAAEHB0Bjq0OgXfmQHLl2g1Y2T9gPq54v0gACFQ8AAoqxUVEksbvf7-mOniwE",
+            "trigger words"     : ["quoi ", " quoi"]
         }
     ],
     "teffe7aPackRestricted" : [
@@ -231,6 +286,16 @@
             "name"              : "sayé",
             "ref"               : "CAACAgQAAxkBAAEG-PpjpexcyxxaxI-AMJg9hIBX0zSv_AACig8AAl3i4VBYzR7A7IaS0iwE",
             "trigger words"     : ["sayé", "saye"]
+        },
+        {
+            "name"              : "L",
+            "ref"               : "CAACAgQAAxkBAAEGq89ji8o58Xa-BTMVT_wEIW6nUuGCMgACsA0AAkrKQVNfbuoOw8OncCsE",
+            "trigger words"     : ["l", "f"]
+        },
+        {
+            "name"              : "Feur 2",
+            "ref"               : "CAACAgQAAxkBAAEHB0Bjq0OgXfmQHLl2g1Y2T9gPq54v0gACFQ8AAoqxUVEksbvf7-mOniwE",
+            "trigger words"     : ["quoi"]
         }
     ]
 }
